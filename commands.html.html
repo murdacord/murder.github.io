@@ -1,0 +1,196 @@
+<html>
+  <body style="background-color:rgb(32, 32, 32); font-family: monospace ; color: white;">
+    </body>
+<div style="white-space:pre;">
+default prefix: $ | support server: https://discord.gg/wonderbot | [] is optional and <> is required
+┌── autoresponder
+|    ├──  autoresponder[ar]: Manage the server's autoresponders
+|    |   ├── autoresponder delete[remove]: Delete an autoresponder trigger
+|    |   ├── autoresponder clear: Delete all autoresponder triggers
+|    |   ├── autoresponder show[list]: View a list of autoresponder triggers and their responses
+|    |   ├── autoresponder add[create]: Create custom autoresponder triggers with custom responses
+┌── autoreact
+|    ├──  autoreact[art]: Manage the server's auto reactions
+|    |   ├── autoreact clear: Delete all triggers at once
+|    |   ├── autoreact add: Add custom triggers that the bot will react with custom emojis to
+|    |   ├── autoreact delete[remove]: Remove a trigger
+|    |   ├── autoreact show[list]: View a list of triggers
+┌── avatars
+|    ├──  pastavatars[avatars|oldavatars|avatarhistory|ah|avs]: View a user's avatar history
+|    ├──  clearavatars: Clear your avatar history
+┌── boosters
+|    ├──  boostmessage[bm|boost]: Manage the server's boost messages
+|    |   ├── boostmessage clear: Delete all boost messages
+|    |   ├── boostmessage test: Test boost messages
+|    |   ├── boostmessage remove[delete]: Remove a boost message
+|    |   ├── boostmessage disable: Disable the boost message module
+|    |   ├── boostmessage add: Add a custom boost message
+|    |   ├── boostmessage show[list]: View a list of boost messages
+┌── chatfilter
+|    ├──  chatfilter[cf|filter]: Manage the server's word blacklist
+|    |   ├── chatfilter clear: Clear the server's word blacklist
+|    |   ├── chatfilter show[list]: View a list of the server's word blacklist
+|    |   ├── chatfilter add: Blacklist a word
+┌── forcenickname
+|    ├──  forcenickname[fn]: Manage nicknames of the server's members
+|    |   ├── forcenickname delete[remove]: Stop forcing a member's nickname
+|    |   ├── forcenickname clear: Stop forcing every member's nickname
+|    |   ├── forcenickname add: Force a member's nickname
+|    |   ├── forcenickname show[list]: View a list of members who have their nicknames forced
+┌── fun
+|    ├──  question[8ball|8b]: Ask the 8ball a question
+|    ├──  gayrate[gr|gay]: Find out how gay you are
+|    ├──  coolrate[cr|cool]: Find out how cool you are
+|    ├──  pp: Find out how big your pp is
+|    ├──  cuterate[cute]: Find out how cute you are
+|    ├──  punch: Punch someone
+|    ├──  kiss: Kiss someone
+|    ├──  lick: Lick someone
+|    ├──  hug: Hug someone
+|    ├──  bite: Bite someone
+|    ├──  pat: Pat someone
+|    ├──  bitches: Find out how many bitches you get
+|    ├──  horny: Find out how horny you are
+|    ├──  tickle: Tickle someone
+|    ├──  cry: Self explanatory
+|    ├──  fatrate: Find out how fat you are
+|    ├──  iq: Find out your IQ
+|    ├──  emojify: Turn text into emojis
+|    ├──  coinflip: Flip a coin
+|    ├──  sus: Find out how sus you are
+|    ├──  fuck: Fuck someone
+|    ├──  blacktea: Play a game of blacktea
+┌── google
+|    ├──  google: Search Google for a query
+┌── imageonly
+|    ├──  imageonly[io]: Manage the server's image only channels
+|    |   ├── imageonly add: Add an image only channel
+|    |   ├── imageonly clear: Delete all image only channels
+|    |   ├── imageonly show[list]: View a list of image only channels
+┌── lastfm
+|    ├──  lastfm[lf]: Interact with the Last.fm api
+|    |   ├── lastfm whoknows[wk]: View the top 10 listeners for an artist
+|    |   ├── lastfm toptracks[tt]: View a user's top 10  tracks
+|    |   ├── lastfm embed[mode]: Customize your nowplaying embed
+|    |   ├── lastfm topalbums[tal]: View a user's top 10  albums
+|    |   ├── lastfm globalwhoknows[gwk]: View the global top 10 listeners for an artist
+|    |   ├── lastfm customcommand[cc]: Customize your nowplaying command trigger
+|    |   ├── lastfm topartists[ta]: View a user's top 10  artists
+|    |   ├── lastfm recenttracks[rt]: View your top 10 recent tracks
+|    |   ├── lastfm set: Register your Last.fm account
+|    ├──  nowplaying[np|fm]: View your most recently played track
+┌── moderation
+|    ├──  changenickname[nick|changenick]: Change someone's nickname
+|    ├──  purge[c|clear]: Bulk delete a number of messages
+|    ├──  imagepurge[ic|imageclear]: Bulk delete a number of messages containing attachments
+|    ├──  embedpurge[ec|embedclear]: Bulk delete a number of messages containing embeds
+|    ├──  botpurge[bc|botclear]: Bulk delete a number of messages from bots
+|    ├──  linkpurge[lc|linkclear]: Bulk delete a number of messages containing links
+|    ├──  kick: kicks a member from the guild
+|    ├──  ban[yeet|smoke]: Bans a user from the guild
+|    ├──  unban: unbans a member from the guild
+|    ├──  addrole[role]: Add a role to someone
+|    ├──  slowmode: Set the channel's slowmode
+|    ├──  strip: Strip a user from all their roles
+|    ├──  mute: Mute someone for a period of time
+|    ├──  unmute: Unmute someone
+|    ├──  lockdown[lock]: Lock a channel
+|    ├──  unlockdown[unlock]: Unlock a channel
+┌── starboard
+|    ├──  starboard[star]: Manage the server's starboard configuration
+|    |   ├── starboard clear: Reset the starboard configuration
+|    |   ├── starboard show[list]: View a list of starboard channels, emojis, & threshold
+|    |   ├── starboard add: Add a starboard channel, emoji, & threshold
+|    |   ├── starboard remove: Remove a starboard channel
+┌── usernames
+|    ├──  tags[discrims|discriminators]: View a list of 0001 tags
+|    ├──  pastusernames[names|usernames]: View a list of someone's username history
+|    ├──  clearnames: Clear your username history
+┌── utility
+|    ├──  afk: Mark yourself as AFK
+|    ├──  snipe[s]: View the most recently deleted message
+|    ├──  serverinfo[si|server]: View some information the server
+|    ├──  vanitychecker[vanitycheck|vanity]: Check if a vanity is available
+|    ├──  inviteinfo[ii|invinfo]: View information on a server from an invite code
+|    ├──  whois[userinfo|ui|about]: View information on a user
+|    ├──  avatar[av]: Displays a user's avatar
+|    ├──  serveravatar[sav]: Displays a user's avatar
+|    ├──  invite[inv]: Sends the bot's invite link
+|    ├──  membercount[mc]: View the server's member count
+|    ├──  banner: View someone's banner
+|    ├──  spotify: Shows the Spotify song a user is listening to
+|    ├──  ping: Shows the bot's latency
+|    ├──  servericon: Displays the server's icon
+|    ├──  serverbanner: Displays the server's banner
+|    ├──  reverse: Reverses text
+|    ├──  addemoji[emoji|steal]: Adds an emoji
+|    ├──  deleteemoji: Deletes an emoji
+|    ├──  urban[ud]: Searches the urban dictionary for the definition of a word
+|    ├──  permissions[perms]: Shows a list of a user's guild permissions
+|    ├──  roleperms[rperms]: Shows a list of a role's perms
+|    ├──  roleinfo: Shows information on a role
+|    ├──  emojis[el|emojilist]: 
+|    ├──  reminder[remind|remindme|remind_me]: Schedules a reminder to help you remind something
+|    ├──  anime: Shows information on an anime
+|    ├──  inrole: View a list of members who have the specified role
+|    ├──  boosters[bl|boosterlist]: View a list of the server's boosters
+|    ├──  aninews: Shows the latest anime news
+|    ├──  enlarge[e]: Enlarges an emoji
+|    ├──  character: Shows a picture of an anime character
+|    ├──  botinfo: View some information on the bot
+|    ├──  roles[rl|rolelist]: View a list of the server's roles
+|    ├──  channellist[cl|channels]: View a list of the server's channels
+|    ├──  embed[ce]: Create a custom embed
+|    ├──  prefix: Manage the server's prefixes
+|    |   ├── prefix list[show]: View a list of the server's prefixes
+|    |   ├── prefix delete[remove]: Delete a prefix
+|    |   ├── prefix add: Add a prefix
+|    ├──  birthday[bday]: View someone's birthday
+|    ├──  setbday: Set your birthday
+|    ├──  tag[t]: Manage the server's tags
+|    |   ├── tag create[add]: Create a tag
+|    |   ├── tag show[list]: View a list of tags
+|    |   ├── tag remove[delete]: Remove a tag
+|    ├──  bans: View a list of the server's bans
+|    ├──  cryptocurrency[crypto]: View a cryptocurrency's price
+|    ├──  invites: View a list of the server's invites
+|    ├──  hex: View information on a hex code
+|    ├──  firstmessage: View the channel's first message
+|    ├──  aboutme[bio]: View a user's about me
+|    ├──  copyembed: Copy an embed's code
+|    ├──  timezone[tz]: Manage your timezone
+|    |   ├── timezone set: Set your timezone
+|    |   ├── timezone reset: Unset your timezone
+|    ├──  dominantcolor: Get the dominant color of an image
+|    ├──  github: View some information on a Github user
+|    ├──  translate: Translate some text
+|    ├──  valorant: View some information on a valorant player
+|    ├──  roblox: View information on Roblox users or groups
+|    |   ├── user: View information on a Roblox user
+|    |   ├── group: View information on a Roblox group
+|    ├──  xbox: View information on an Xbox player
+|    ├──  movie: View information on a movie
+|    ├──  bmi: Get your BMI
+┌── voicemaster
+|    ├──  voicemaster[vm|vc]: Manage the server's voicemaster interface
+|    |   ├──  voicemaster setup: Set up the voicemaster interface
+|    |   ├──  voicemaster reset: Disable the voicemaster interface
+|    |   ├──  voicemaster claim: Claim an inactive voice channel
+|    |   ├──  voicemaster ghost: Hide your voice channel
+|    |   ├──  voicemaster unghost: Reveal your voice channel
+|    |   ├──  voicemaster limit: Set a user limit for your voice channel
+|    |   ├──  voicemaster lock: Lock your voice channel
+|    |   ├──  voicemaster unlock: Unlock your voice channel
+|    |   ├──  voicemaster name: Rename your voice channel
+|    |   ├──  voicemaster permit: Permit a user's access to your voice channel
+|    |   ├──  voicemaster reject: Reject a user's access to your voice channel
+|    |   ├──  voicemaster unghost
+┌── welcome
+|    ├──  welcome[welc]: Manage the server's welcome messages 
+|    |   ├── welcome show[list]: View a list of the server's welcome messages
+|    |   ├── welcome add: Add a welcome channel with a custom message
+|    |   ├── welcome clear: Clear all welcome channels and messages
+|    |   ├── welcome remove: Remove a welcome channel
+|    |   ├── welcome test: Test welcome messages
+</div>
+  </html>
