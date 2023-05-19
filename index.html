@@ -1,0 +1,204 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zzzzzzzzzzzz#0001</title>
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" type="image/x-icon" href="images/heal.png">
+  <meta property="og:title" content="zzzzzzzzzzzz#0001">
+  <meta property="og:url" content="zzzzzzzzzzzz#0001">
+  <meta property="og:image" content="images/heal.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="zzzzzzzzzzzz#0001">
+  <meta property="keywords" content="zz sleepy">
+  <meta property="og:description" content="zzzzzzzzzzzz#0001">  
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            font-size: 16px;
+            padding: 20px;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #terminal {
+            flex-grow: 1;
+            background-color: black;
+            padding: 10px;
+        }
+
+        #output-container {
+            height: calc(80vh - 50px);
+            overflow-y: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        #output-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        #output {
+            white-space: pre-wrap;
+        }
+
+        #input-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #prompt {
+            color: white;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        #command-input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            width: 100%;
+        }
+
+        .glow {
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                color: white;
+                text-shadow: 0 0 5px white;
+            }
+            50% {
+                color: white;
+                text-shadow: 0 0 20px white;
+            }
+            100% {
+                color: white;
+                text-shadow: 0 0 5px white;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var output = document.getElementById('output');
+            var input = document.getElementById('command-input');
+            var prompt = document.getElementById('prompt');
+
+            function scrollToBottom() {
+                var outputContainer = document.getElementById('output-container');
+                outputContainer.scrollTop = outputContainer.scrollHeight;
+            }
+
+            function printOutput(message) {
+                output.innerHTML += message;
+                scrollToBottom();
+            }
+
+            function processCommand(command) {
+                command = command.trim().toLowerCase();
+
+                switch (command) {
+                    case 'help':
+                        printOutput("roblox - add me on roblox\n");
+                        printOutput("discord - best discord server ong!!!\n");
+                        printOutput("social - Display social networkss\n");
+                        printOutput('clear - clear the terminal\n\n');
+                        break;
+
+
+                    case 'clear':
+                        output.textContent = welcomeMessage;
+                        break;
+
+                    case 'roblox':
+                        printOutput("https://www.roblox.com/users/1234639193/profile\n");
+                        break;
+
+                    case 'discord':
+                        printOutput("https://discord.gg/really\n");
+                        break;
+                    
+                    case 'social':
+                    printOutput("tiktok  -  https://www.tiktok.com/@murdder\n");
+                    printOutput("instagram  -  https://www.instagram.com/realitymurder\n");
+                    printOutput("github  -  https://github.com/murdamurdamurda\n");
+                      break;
+
+                    default:
+                        printOutput("Invalid command, type 'help' for a list of available terminal commands\n");
+                        break;
+                }
+            }
+
+            input.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    var command = input.value;
+                    printOutput('<span class="glow">' + prompt.innerHTML + ' ' + command + '</span>\n\n');
+                    input.value = '';
+                    processCommand(command);
+                }
+            });
+
+            var welcomeMessage = `\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⡦⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⣆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⡬⣄⢠⢠⣿⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⣿⣿⣻⣿⣿⣿⣿⣿⡸⣿⣿⢻⣇⠙⣓⢻⣿⡞⣿⣷⢳⡀⠀⠀⠀
+⠀⠀⠀⠀⢜⣿⡏⣟⣿⡿⣧⢿⣻⢰⡉⢻⡏⢟⣃⠹⠯⢻⣷⢛⣿⠺⣷⠀⠀⠀
+⠀⠀⠀⢀⢸⣿⣇⢹⣿⡇⣵⠘⠭⠸⣷⡀⡳⢢⡄⠀⠀⢰⣿⢸⡷⢸⣿⡄⠀⠀
+⠀⠀⠀⢸⡆⢻⣿⠈⣿⣿⠁⣤⠀⠀⢹⣷⣿⣿⡏⠀⡤⠃⣿⡞⠁⢸⣿⡇⠀⠀
+⠀⠀⠀⣿⣿⠈⢽⣇⢿⣿⡇⠟⠳⠀⢸⣿⣿⣿⣿⣿⣾⠇⣿⣧⠀⢸⣿⡇⠀⠀
+⠀⠀⠀⣿⣿⡀⠀⠙⢸⣿⣇⠰⣴⣶⣿⣿⣷⣾⡿⠟⠁⠀⢻⢿⠀⢸⣿⣷⠀⠀
+⠀⠀⠀⣿⣿⡇⠀⠀⠈⡟⣿⠀⠀⠉⠉⠉⢉⣠⣴⣧⢄⠀⠈⠌⠀⢻⣿⣿⠀⠀
+⠀⠀⠀⣿⣿⣿⠀⠀⠀⢳⢹⡀⠀⠀⠂⠁⣿⣿⣿⠏⠀⠈⠁⠐⠀⢼⣿⣿⡄⠀
+⠀⠀⢰⣿⣿⣿⡆⠀⠀⠈⠇⠃⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠈⢸⣿⣿⡇⠀
+⠀⠀⢸⢻⣿⣿⡇⠀⠀⠂⠀⠀⠰⣄⠀⠀⠀⣀⣤⣶⠶⠏⠀⠀⠀⠘⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\nWelcome back zzzzzzzzzzzz#0001\nType 'help' for a list of available terminal commands\n\n`;
+
+            function typeWelcomeMessage() {
+                printOutput('<span class="glow">' + welcomeMessage + '</span>');
+                prompt.style.display = 'inline';
+            }
+
+            typeWelcomeMessage();
+        });
+    </script>
+
+</head>
+<body>
+    <div id="terminal">
+        <div id="output-container">
+            <pre id="output"><span class="glow">
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+
+</span></pre>
+        </div>
+        <div id="input-container">
+            <span id="prompt" style="display: inline;">user@zzzzz:~$</span>
+            <input id="command-input" type="text">
+        </div>
+    </div>
+    <script>
+        function scrollToBottom() {
+            var outputContainer = document.getElementById('output-container');
+            outputContainer.scrollTop = outputContainer.scrollHeight;
+        }
+        document.getElementById('command-input').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            setTimeout(scrollToBottom, 0); 
+        }
+    });
+</script>
+
+
+</body></html>
